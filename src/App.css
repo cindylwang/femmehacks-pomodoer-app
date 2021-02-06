@@ -1,0 +1,54 @@
+.App-header {
+  background-color: #E8FADD;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color:  #384635;
+  text-align: center;
+}
+
+.App {
+  background-color: #D2ECC9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.timer-color{
+  color: #FFFFFF;
+}
+
+.timer-background-color{
+  color: #384635;
+}
+
+.text-color{
+  color: #384635;
+}
+
+.button-color{
+  color: #E8FADD;
+}
+
+.tasks-background-color{
+  color: #B4CBAC;
+}
+
+.btn-secondary {
+  color: #fff;
+  background-color: #2E4C80;
+  background-color:  #E8FADD;
+  border-color: #2E4C80;
+  border-color: #384635;
+}
+
+body{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
