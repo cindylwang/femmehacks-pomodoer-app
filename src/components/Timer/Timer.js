@@ -6,12 +6,11 @@ import Button from 'react-bootstrap/Button';
 class OurTimer extends Component {
     constructor(props) {
       super(props);
-      this.state ={
+      this.state = {
         started: false,
         work: true,
-        count: 1500,
-        // minutes: 24,
-        // seconds: 59,
+        minutes: 24,
+        seconds: 59,
         over: false,
       }
     }
@@ -24,46 +23,43 @@ class OurTimer extends Component {
       })
     }
   
-  //   componentDidMount(){
-  //     const {startCount} = this.props
-  //     this.setState({
-  //         count: startCount
-  //     })
-  //     if (this.state.started === true) {
-  //       this.interval = setInterval(()=>{
-  //         this.setState(prevState =>({
-  //             count: prevState.count - 1
-  //             }))
-  //         }, 1000)
-  //     }
-
-  // }
-
+  componentDidMount(){
+    const startCount = this.state.seconds
+    this.setState({
+        seconds: startCount
+    })
+    if (this.state.started === true) {
+      this.interval = setInterval(()=>{
+        this.setState(prevState =>({
+            seconds: prevState.seconds - 1
+            }))
+        }, 1000)
+    }
+}
 
 
- 
 
 
-  // componentWillUnmount(){
-  //     clearInterval(this.interval)
-  // }
+  componentWillUnmount(){
+      clearInterval(this.interval)
+  }
     
     render () {
       let startStatus = (this.state.started ? 'STOP' : 'START');
       let workStatus = (this.state.work ? 'REST' : 'WORK');
-      // const {count} = this.state
+      const seconds = this.state.seconds;
+      const time = this.state.minutes + ":" + this.state.seconds
 
       return (
         <section className="timer-container">
-          <row>
-            <p>hello please work</p>
-          {/* hopefully renders buttons in a row on top of the timer. added custom css for the buttons too!*/}
-          <Button variant="secondary" onClick={this.handleClick()}>{startStatus}</Button>{' '}
-          <Button variant="secondary" onClick={this.handleClick()}>{workStatus}</Button>{' '}
-          </row>
+          <div>
+            {startStatus}
+            {/* <Button variant="secondary" >{startStatus}</Button>{' '}
+            <Button variant="secondary" >{workStatus}</Button>{' '} */}
+          </div>
           <section className="timer">
             <div>
-                {/* <h1>{count}</h1> */}
+                <h1>{time}</h1>
             </div>
           </section>
         </section> 
@@ -77,19 +73,23 @@ class OurTimer extends Component {
   export default OurTimer
 
 
+  {/* hopefully renders buttons in a row on top of the timer. added custom css for the buttons too!*/}
+          
 
 
 
-//     const tick = () => {
-//       if (this.state.work === false || this.state.over === false)
-//       if (this.state.minutes === 0 && this.state.seconds === 0) this.setState({over: true});
-//       else if (this.state.rest === true) rest();
-//       else if (this.state.seconds === 0) {
-//          this.setState({minutes: this.state.minutes - 1})
-//          this.setState({seconds: 59})
-//       } else {
-//          this.setState({seconds: this.state.seconds - 1})
-//       }
+    const tick = () => {
+      if (this.state.over === false){
+      if (this.state.minutes === 0 && this.state.seconds === 0) 
+      this.setState(this.state.over = true) {
+      else if (this.state.seconds === 0) {
+         this.setState({minutes: this.state.minutes - 1})
+         this.setState({seconds: 59})
+      } else {
+         this.setState({seconds: this.state.seconds - 1})
+      }
+    }
+  }
 
 //     const rest = () => {
           // if (this.state.work === true) return;
@@ -103,5 +103,3 @@ class OurTimer extends Component {
             //  this.setState({seconds: this.state.seconds - 1})
           // } 
 //      }
-  
-  

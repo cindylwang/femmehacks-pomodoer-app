@@ -1,32 +1,40 @@
+body{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: #D2ECC9
+}
+
 .App-header {
   background-color: #E8FADD;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(15px + 2vmin);
   color:  #384635;
   text-align: center;
 }
 
 .App {
   background-color: #D2ECC9;
-  min-height: 100vh;
+  min-height: 30vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(70px + 2vmin);
   color: white;
 }
 
 .timer-color{
   color: #FFFFFF;
-}
-
-.timer-background-color{
-  color: #384635;
+  background-color: #384635;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(65px + 2vmin);
 }
 
 .text-color{
@@ -47,8 +55,4 @@
   background-color:  #E8FADD;
   border-color: #2E4C80;
   border-color: #384635;
-}
-
-body{
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
