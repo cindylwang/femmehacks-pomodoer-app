@@ -1,0 +1,143 @@
+body {background-color: #D2ECC9;}
+.ToDoList {
+    background-color: white;
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    padding:10px;
+    padding-left: 20px;
+    padding-top: 5px;
+    border: 4px solid #B4CBAC;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding-bottom: 20px;
+}
+
+.ToDoForm {
+    padding: 10px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px;
+}
+
+.float {
+    float: left;
+}
+
+
+.btn-secondary {
+    color: #384635;
+    background-color: hsl(218, 47%, 34%);
+    background-color:  #f3f9ef;
+    border-color: #2E4C80;
+    border-color: #517848;
+    font-family: Helvetica, sans-serif;
+    text-align:center;
+    outline: none;
+    margin-left:5px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    border-radius: 14px;
+    padding:2px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 11px;
+}
+
+.center {
+
+    margin: 0;
+    margin-top: 20px;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.btn-primary {
+    color: #384635;
+    background-color: hsl(218, 47%, 34%);
+    background-color:  #f3f9ef;
+    border-color: #2E4C80;
+    border-color: #517848;
+    font-family: Helvetica, sans-serif;
+    text-align:center;
+    outline: none;
+    margin-left:5px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    border-radius: 14px;
+    padding:2px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 11px;
+
+}
+
+.todo {
+    margin-right: 20px;
+    font-family: Helvetica, sans-serif;
+    color: #384635;
+    margin: 5px;
+    margin-left: 20px;
+    display: list-item;
+    
+}
+
+p {
+    color: #384635;
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+.toDoFormTitle {
+    display: inline-block;
+}
+
+.toDoFormForm {
+    display: inline-block;
+    width: 215px;
+}
+
+.inputBar{
+    border-color: #E8FADD; 
+    border-radius: 5px;
+    width: 470px;
+    outline-color: #384635;
+}
+
+.App-header{
+    background-color:#E8FADD;
+    text-align:center;
+    font-size: 40px;
+
+}
+
+.timer {
+    background-color: #384635;
+}
+
+.timerTimer{
+    color: #FFFFFF;
+    background-color: #384635;
+    min-height: 20vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(65px + 2vmin);
+}
+
+.buttons {
+    margin-left:auto;
+    margin-right:auto;
+    width: 200px;
+    padding-top: 50px;
+}
+
+
