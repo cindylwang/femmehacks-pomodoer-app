@@ -124,20 +124,29 @@ p {
 
 .timerTimer{
     color: #FFFFFF;
-    background-color: #384635;
-    min-height: 20vh;
-    display: flex;
+    display: flex; 
     flex-direction: row;
     align-items: center;
     justify-content: center;
     font-size: calc(65px + 2vmin);
+    padding-top: 5px;
+    /* margin-left:auto;
+    margin-right:auto;
+    width:30%; */
+    padding-bottom: 30px;
 }
+
+.timerMargin{
+    margin-top: 5px;
+    margin-bottom:70px;
+}
+
 
 .buttons {
     margin-left:auto;
     margin-right:auto;
-    width: 200px;
-    padding-top: 50px;
+    width: 210px;
+    padding-top: 10px;
 }
 
 

@@ -1,3 +1,4 @@
+import Jumbotron from 'react-bootstrap/Jumbotron';
 import React, { useState } from 'react';
 //mock data
 import data from "./data.json";
@@ -49,9 +50,10 @@ function App() {
             </a>
           </header>
        </div>
-        <div className="timer">
+        <div className='timer'>
           <OurTimer /> 
         </div>
+        
         <div className ="listComponent">
           <div className='ToDoForm'>
             <div className="toDoFormTitle">
