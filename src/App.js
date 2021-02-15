@@ -8,6 +8,7 @@ import ToDoForm from './ToDoForm';
 // import './App.css';
 import './ToDoList.css';
 
+
 import OurTimer from './Timer';
 
 function App() {
@@ -45,9 +46,9 @@ function App() {
     <div className="App">
         <div className="App-header">
           <header>
-            <a> 
+            <h1> 
               POMODOER
-            </a>
+            </h1>
           </header>
        </div>
         <div className='timer'>

@@ -23,6 +23,11 @@ body {background-color: #D2ECC9;}
     width: 550px;
 }
 
+h1 {
+    margin-top: 0px;
+    margin-bottom:40px;
+}
+
 .float {
     float: left;
 }
@@ -83,8 +88,17 @@ body {background-color: #D2ECC9;}
     color: #384635;
     margin: 5px;
     margin-left: 20px;
-    display: list-item;
-    
+    /* display: list-item; */
+    background: url('box.png') no-repeat left top;
+    padding-left: 25px;
+}
+
+
+ul.checklist {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
 }
 
 p {
@@ -93,6 +107,13 @@ p {
     text-align: center;
     margin-top: 10px;
 
+}
+
+
+.strike {
+    text-decoration: line-through;
+    background: url('filledbox.png') no-repeat left top;
+    
 }
 
 .toDoFormTitle {
@@ -112,9 +133,10 @@ p {
 }
 
 .App-header{
+    color: #384635;
     background-color:#E8FADD;
     text-align:center;
-    font-size: 40px;
+    font-size: 20px;
 
 }
 

@@ -9,7 +9,9 @@ const ToDoList = ({toDoList, handleToggle, handleFilter}) => {
             <p>TO DO:</p>
             {toDoList.map(todo => {
                 return (
-                    <ToDo todo={todo} handleToggle={handleToggle} handleFilter={handleFilter}/>
+                    <ul className='checklist'>
+                        <ToDo todo={todo} handleToggle={handleToggle} handleFilter={handleFilter}/>
+                    </ul>
                 )
             })}
             <div className ='center'>
