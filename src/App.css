@@ -25,27 +25,3 @@ body{
   font-size: calc(70px + 2vmin);
   color: white;
 }
-
-.timer-color{
-  color: #FFFFFF;
-  background-color: #384635;
-  min-height: 20vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(65px + 2vmin);
-}
-
-.text-color{
-  color: #384635;
-}
-
-.button-color{
-  color: #E8FADD;
-}
-
-.tasks-background-color{
-  color: #B4CBAC;
-}
-
