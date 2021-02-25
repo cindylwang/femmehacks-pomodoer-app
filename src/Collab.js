@@ -24,7 +24,7 @@ const Collab = (props) => {
           </header>
        </div>
         <div className='timer'>
-          <OurTimer /> 
+          <OurTimer room={roomId}/> 
         </div>
         <ToDoList room={roomId}/>
       

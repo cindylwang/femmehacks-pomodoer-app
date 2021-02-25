@@ -13,10 +13,6 @@ const useList = (roomId) => {
     
 
     useEffect(()=> {
-
-        
-
-
         // creates websocket connection
         socketRef.current = socketIOClient(SOCKET_SERVER_URL, {
             query:{roomId},
@@ -39,7 +35,6 @@ const useList = (roomId) => {
 
         // listens for status changes
         socketRef.current.on(STATUS_CHANGE, (data) => {
-            console.log('before', data.status)
             const copy = [...data.status]
             copy[data.index] = !copy[data.index];
             setStatuses(copy);
@@ -47,7 +42,6 @@ const useList = (roomId) => {
 
         // listens for clear 
         socketRef.current.on(CLEAR_COMPLETE, (data) => {
-            console.log('clear', data)
             const indices = []
             const statusesCopy = []
             for (let i=0; i < data.status.length; i++) {
@@ -60,12 +54,10 @@ const useList = (roomId) => {
 
             setStatuses(statusesCopy)
             // setCompleteIndices(indices)
-            console.log('indices',indices)
             
 
             // using indices to delete corresponding tasks
             const copy = [...data.tasks]
-            console.log(data.tasks)
             for (let i=indices.length-1; i>(-1);i--) {
                 copy.splice(indices[i],1)
             }
@@ -77,7 +69,7 @@ const useList = (roomId) => {
         return () => {
             socketRef.current.disconnect();
         };
-    }, [roomId]);
+    }, [roomId,statuses]);
 
     //sends message to server that forwards to all users in room
     const sendTask = (taskBody) => {

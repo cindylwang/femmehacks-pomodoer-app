@@ -8,7 +8,8 @@ const io = require('socket.io')(server,{
 const PORT = 4000;
 const NEW_TASK_EVENT = "newTaskItem";
 const STATUS_CHANGE = 'statusChange';
-const CLEAR_COMPLETE = 'clearCompleteTasks'
+const CLEAR_COMPLETE = 'clearCompleteTasks';
+const TIMER_START_STOP = 'timerPush';
 
 io.on('connection', (socket) => {
     
@@ -23,7 +24,6 @@ io.on('connection', (socket) => {
 
     //listens for status change
     socket.on(STATUS_CHANGE, (data) => {
-        console.log("got status change",data);
         io.in(roomId).emit(STATUS_CHANGE, data)
     })
 
@@ -34,8 +34,11 @@ io.on('connection', (socket) => {
 
     // listens for clear notif
     socket.on(CLEAR_COMPLETE, (data) => {
-        console.log('got clear', data);
         io.in(roomId).emit(CLEAR_COMPLETE, data);
+    })
+
+    socket.on(TIMER_START_STOP, (data) => {
+        io.in(roomId).emit(TIMER_START_STOP, data);
     })
 
     

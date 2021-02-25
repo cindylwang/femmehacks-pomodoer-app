@@ -1,9 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import Button from 'react-bootstrap/Button';
+import useTimer from './useTimer';
 import './ToDoList.css'
 
-export default function OurTimer() {
-  const [start, setStart] = useState(false);
+const OurTimer = (props) => {
+  const roomId =  props.room;
+  const {start, sendStart} = useTimer(roomId)
   const [work, setWork] = useState(true);
   const [minutes, setMinutes] = useState(25);
   const [seconds, setSeconds] = useState(0);
@@ -46,7 +48,7 @@ export default function OurTimer() {
   useEffect(time);
 
   //click handlers
-  const handleStart = () => setStart(!start);
+  const handleStart = () => sendStart(start);
 
   const handleWork = () => {
     setWork(!work)
@@ -89,3 +91,5 @@ export default function OurTimer() {
     </section>
   )
 }
+
+export default OurTimer

@@ -5,7 +5,7 @@ import './ToDoList.css';
 import Button from 'react-bootstrap/Button';
 
 const ToDoList = (props) => {
-    const roomId =  props.room; // gets roomId from the URl
+    const roomId =  props.room; // gets roomId from props
     console.log('roomId', roomId)
     const {tasks, sendTask, statuses, sendStatus, sendClear} = useList(roomId);
     const [newTask, setNewTask] = React.useState("");
