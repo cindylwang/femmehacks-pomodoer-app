@@ -10,6 +10,7 @@ const NEW_TASK_EVENT = "newTaskItem";
 const STATUS_CHANGE = 'statusChange';
 const CLEAR_COMPLETE = 'clearCompleteTasks';
 const TIMER_START_STOP = 'timerPush';
+const TIMER_WORK_REST = 'workRestPush';
 
 io.on('connection', (socket) => {
     
@@ -39,6 +40,10 @@ io.on('connection', (socket) => {
 
     socket.on(TIMER_START_STOP, (data) => {
         io.in(roomId).emit(TIMER_START_STOP, data);
+    })
+
+    socket.on(TIMER_WORK_REST, (data) => {
+        io.in(roomId).emit(TIMER_WORK_REST, data);
     })
 
     
