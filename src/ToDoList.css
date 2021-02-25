@@ -1,5 +1,5 @@
 body {background-color: #D2ECC9;}
-.ToDoList {
+.tasks-container {
     background-color: white;
     width: 550px;
     margin-left: auto;
@@ -49,6 +49,25 @@ h1 {
     padding:2px;
     padding-left: 25px;
     padding-right: 25px;
+    font-size: 11px;
+}
+
+.btn-tertiary {
+    color: #384635;
+    background-color: hsl(218, 47%, 34%);
+    background-color:  #f3f9ef;
+    border-color: #2E4C80;
+    border-color: #517848;
+    font-family: Helvetica, sans-serif;
+    text-align:center;
+    outline: none;
+    margin-left:5px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    border-radius: 14px;
+    padding:2px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 11px;
 }
 
@@ -106,7 +125,25 @@ p {
     font-family: Helvetica, sans-serif;
     text-align: center;
     margin-top: 10px;
+    font-weight: 520;
 
+}
+
+.collab-header {
+    padding-top: 2vmin;
+    font-size: 2.5vmin;
+    margin-bottom:2vmin;
+}
+
+.other-task{
+    color:#B4CBAC
+}
+
+.taskInput {
+    width:50vmin;
+    padding:0.5vmin;
+    margin-left:1vmin;
+    outline-color:#384635;
 }
 
 

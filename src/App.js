@@ -8,21 +8,9 @@ import Collab from "./Collab";
 function App() {
   return (
     <Router>
-        <header>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-        </ul>
-            <h1> 
-              POMODOER
-            </h1>
-        </header>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/:roomId" component={Collab}/>
-        {/* eventually become Collab */}
-        {/* <Route exact path="/:roomId" component={ChatRoom} /> */}
       </Switch>
     </Router>
   );

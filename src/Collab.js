@@ -17,7 +17,7 @@ const Collab = (props) => {
   return (
     <div className="App">
         <div className="App-header">
-          <header>
+          <header className='collab-header'>
             <h1> 
               POMODOER
             </h1>

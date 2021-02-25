@@ -54,12 +54,15 @@ const ToDoList = (props) => {
                     onChange={handleChange}
                     placeholder="add a task..."
                     onKeyPress={handleEnter}
+                    className='taskInput'
                 ></input>
-                <button className = 'addTask' onClick={handleSubmit}>add</button>
+                <Button variant='tertiary' className = 'addTask' onClick={handleSubmit}>ADD</Button>
             </div>
-            <p>TO DO:</p>
+            
             <div className='tasks-container'>
+                
                 <ul className='checklist'>
+                    <p>TO DO:</p>
                     {tasks.map((task,i)=> (
                         <li
                             key={i}
