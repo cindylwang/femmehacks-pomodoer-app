@@ -1,62 +1,18 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import Button from 'react-bootstrap/Button';
+import useTimer from './useTimer';
 import './ToDoList.css'
+// import { __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED } from 'react-dom';
 
-export default function OurTimer() {
-  const [start, setStart] = useState(false);
-  const [work, setWork] = useState(true);
-  const [minutes, setMinutes] = useState(25);
-  const [seconds, setSeconds] = useState(0);
-
-  //function for decrementing timer
-  const decrement = () => {
-    if (start === true) {
-      const intervalId = setInterval(() => {
-        setSeconds((prev) => prev - 1);
-      }, 1000);
-      return () => {
-        clearInterval(intervalId);
-      };
-    }
-  }
-
-  //calls decrement every time start changes
-  useEffect(decrement, [start]);
-
-
-  //function for adjusting display time
-  const time = () => {
-    if (start === true){
-      if (seconds === -1 && minutes !== 0) {
-        setSeconds(59);
-        setMinutes((prev) => prev - 1);
-      } else if (minutes === 0 && seconds === -1 && work === true ) {
-        setMinutes(5);
-        setSeconds(0);
-        setWork(false);
-      } else if (minutes === 0 && seconds === -1 && work === false) {
-        setMinutes(25);
-        setSeconds(0);
-        setWork(true);
-      }
-    }
-  }
-
-  //calls time on every re-render
-  useEffect(time);
-
+const OurTimer = (props) => {
+  const roomId =  props.room;
+  const {start, sendStart, work, sendWork, minutes, seconds} = useTimer(roomId)
+  
   //click handlers
-  const handleStart = () => setStart(!start);
+  const handleStart = () => sendStart(start);
 
   const handleWork = () => {
-    setWork(!work)
-    if (work === true){
-      setMinutes(5);
-      setSeconds(0);
-    } else {
-      setMinutes(25);
-      setSeconds(0);
-    }
+    sendWork(work)
   }
 
   //variables for display
@@ -69,8 +25,6 @@ export default function OurTimer() {
   } else {
     secondsDisplay = seconds
   }
-
-  
 
   return (
     
@@ -89,3 +43,5 @@ export default function OurTimer() {
     </section>
   )
 }
+
+export default OurTimer
