@@ -113,6 +113,7 @@ h1 {
     /* display: list-item; */
     background: url('box.png') no-repeat left top;
     padding-left: 25px;
+    cursor: pointer;
 }
 
 
@@ -135,9 +136,7 @@ p {
 
 .collab-header {
     padding-top: 2vmin;
-    
     margin-bottom:2vmin;
-    
 }
 
 .home-button {
@@ -145,7 +144,6 @@ p {
     color: #384635;
     font-size: 5vmin;
 }
-
 
 .other-task{
     color:#B4CBAC
