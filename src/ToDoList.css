@@ -50,6 +50,7 @@ h1 {
     padding-left: 25px;
     padding-right: 25px;
     font-size: 11px;
+    cursor: pointer;
 }
 
 .btn-tertiary {
@@ -69,6 +70,7 @@ h1 {
     padding-left: 10px;
     padding-right: 10px;
     font-size: 11px;
+    cursor: pointer;
 }
 
 .center {
@@ -98,6 +100,7 @@ h1 {
     padding-left: 25px;
     padding-right: 25px;
     font-size: 11px;
+    cursor: pointer;
 
 }
 
@@ -126,14 +129,23 @@ p {
     text-align: center;
     margin-top: 10px;
     font-weight: 520;
+    cursor: default;
 
 }
 
 .collab-header {
     padding-top: 2vmin;
-    font-size: 2.5vmin;
+    
     margin-bottom:2vmin;
+    
 }
+
+.home-button {
+    text-decoration: none;
+    color: #384635;
+    font-size: 5vmin;
+}
+
 
 .other-task{
     color:#B4CBAC

@@ -7,6 +7,8 @@ import ToDoList from "./ToDoList";
 import './ToDoList.css';
 // import useChat from "../useChat";
 
+import {Link} from 'react-router-dom'
+
 
 import OurTimer from './Timer';
 
@@ -18,9 +20,9 @@ const Collab = (props) => {
     <div className="App">
         <div className="App-header">
           <header className='collab-header'>
-            <h1> 
-              POMODOER
-            </h1>
+            <Link to ={`/`} className='home-button'> 
+              POMODOER 
+            </Link>
           </header>
        </div>
         <div className='timer'>
